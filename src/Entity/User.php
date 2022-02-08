@@ -25,6 +25,38 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $username;
 
     /**
+     * @ORM\Column(type="string", length=180)
+     */
+    private $firstname;
+
+
+
+    /**
+     * @ORM\Column(type="string", length=180)
+     */
+    private $lastname;
+
+    /**
+     * @ORM\Column(type="string", length=180)
+     */
+    private $gender;
+
+    /**
+     * @ORM\Column(type="string", length=180)
+     */
+    private $email;
+
+    /**
+     * @ORM\Column(type="string", length=180)
+     */
+    private $phone;
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     */
+    private $birthday;
+
+    /**
      * @ORM\Column(type="json")
      */
     private $roles = [];
@@ -51,6 +83,78 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setUsername(string $username): self
     {
         $this->username = $username;
+
+        return $this;
+    }
+
+    public function getFirstname(): string
+    {
+        return (string) $this->firstname;
+    }
+
+    public function setFirstname(string $firstname): self
+    {
+        $this->firstname = $firstname;
+
+        return $this;
+    }
+
+    public function getLastname(): string
+    {
+        return (string) $this->lastname;
+    }
+
+    public function setLastname(string $lastname): self
+    {
+        $this->lastname = $lastname;
+
+        return $this;
+    }
+
+    public function getGender(): string
+    {
+        return (string) $this->gender;
+    }
+
+    public function setGender(string $gender): self
+    {
+        $this->gender = $gender;
+
+        return $this;
+    }
+
+    public function getEmail(): string
+    {
+        return (string) $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    public function getPhone(): string
+    {
+        return (string) $this->phone;
+    }
+
+    public function setPhone(string $phone): self
+    {
+        $this->phone = $phone;
+
+        return $this;
+    }
+
+    public function getBirthday(): ?\DateTimeInterface
+    {
+        return $this->birthday;
+    }
+
+    public function setBirthday(?\DateTimeInterface $birthday): self
+    {
+        $this->birthday = $birthday;
 
         return $this;
     }
