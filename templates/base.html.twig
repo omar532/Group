@@ -3,6 +3,38 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+
+
+        {% block cssPublication %}
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" />
+
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" />
+
+            <style>
+
+            body {
+        background-color: #eee
+        }
+
+        .time {
+        font-size: 9px !important
+        }
+
+        .socials i {
+        margin-right: 14px;
+        font-size: 17px;
+        color: #d2c8c8;
+        cursor: pointer
+        }
+
+        .feed-image img {
+        width: 100%;
+        height: auto
+        }
+    </style>
+        {% endblock %}
         {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
         {% block stylesheets %}

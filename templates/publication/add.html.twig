@@ -1,0 +1,42 @@
+
+{% extends 'base.html.twig' %}
+{% block title %}Hello PublicationController!{% endblock %}
+{% block cssPublication %} {{ parent() }} {% endblock %}
+
+{% block body %}
+
+
+
+
+{{ form_start(formPublication) }}
+
+
+    <div class="container mt-4 mb-5">
+    <div class="d-flex justify-content-center row">
+
+    <div class="col-md-8">
+        <div class="col-md-12" style="text-align: center">
+            <h1>add Publication</h1></div>
+    <div class="container mt-4 mb-5">
+        <div class="col-md-12">
+            {{ form_row(formPublication.publication, {'label' : "Text :", 'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="col-md-12" style="margin-top: 20px">
+
+            {{ form_row(formPublication.imageFile, {'label' : "Image :", 'attr': {'class': 'form-control-file'}}) }}
+        </div>
+
+        <div class="col-md-12 btn btn-primary" style="margin-top: 20px" >
+            <button type="submit" class="btn btn-primary">
+                <i class="fa fa-btn fas fa-save"></i> ajouter
+            </button>
+        </div>
+
+    </div>
+
+    </div></div></div>
+
+    {{ form_end(formPublication) }}
+
+
+{% endblock %}
