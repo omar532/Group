@@ -27,6 +27,8 @@ class PublicationController extends AbstractController
     {
         $em= $this->getDoctrine()->getManager();
 
+
+
         $query = $em->createQuery('SELECT p FROM App\Entity\Publication p WHERE p.usr_Id = :num ')
             ->setParameter('num', $this->getUser()->getUserIdentifier());
 
